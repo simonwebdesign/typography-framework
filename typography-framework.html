@@ -4,57 +4,181 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Typography Framework</title>
 <link href="typography-framework.css" rel="stylesheet" type="text/css" />
+<style>
+/* Flex Grid 
+Author: Simon Web Design, LLC
+*/
+
+.outer_wrap {
+	margin: 0 auto;
+	width: 728px;
+}
+.inner_wrap {
+	padding: 50px 60px 60px 60px;
+}
+.flex_10 {
+	width: 10%;
+	float: left;
+}
+.flex_20 {
+	width: 20%;
+	float: left;
+}
+.flex_25 {
+	width: 25%;
+	float: left;
+}
+.flex_33 {
+	width: 33%;
+	float: left;
+}
+.flex_40 {
+	width: 40%;
+	float: left;
+}
+.flex_50 {
+	width: 50%;
+	float: left;
+}
+.flex_60 {
+	width: 60%;
+	float: left;
+}
+.flex_66 {
+	width: 66%;
+	float: left;
+}
+.flex_75 {
+	width: 75%;
+	float: left;
+}
+.flex_80 {
+	width: 80%;
+	float: left;
+}
+.flex_90 {
+	width: 90%;
+	float: left;
+}
+.flex_100 {
+	width: 100%;
+}
+.flex_pad {
+	padding: 10px;
+}
+.flex_vert_pad {
+	padding: 10px 0px 15px 0px;
+}
+.clear {
+	clear: both;
+}
+</style>
 </head>
 <body>
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-<p>Paragraph</p>
-<p><em>Emphasized Paragraph</em></p>
-<p><a href="#" class="more">Link</a></p>
-<pre>Preformatted
-</pre>
-<p><code>Code</code> </p>
-<blockquote>BlockQuote sdfgsdf; sdf;glksdf sd;flgksdfg sd;flgksdfg<br />
-sdfgl;ksdfg;ksdf;g</blockquote> 
-<ul>
-  <li>Bullet 1</li>
-  <li>Bullet 2</li>
-  <li>Bullet 3</li>
-</ul>
-<table width="100%" border="1">
-  <tr>
-    <th scope="col">&nbsp;</th>
-    <th scope="col">&nbsp;</th>
-    <th scope="col">&nbsp;</th>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-<label for="textfield"></label>
-<input type="text" name="textfield" id="textfield" />
-<label for="textarea"></label>
-<textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
-<br />
-<input type="checkbox" name="checkbox" id="checkbox" />
-<label for="checkbox"></label>
-<input type="radio" name="radio" id="radio" value="radio" />
-<label for="radio"></label>
-<label for="select"></label>
-<select name="select" id="select">
-</select>
-<br />
-<input name="button" type="submit" class="button" id="button" value="Submit" />
+<div class="outer_wrap">
+  <div class="flex_vert_pad clear"></div>
+  <h1 class="headline">Headline</h1>
+  <code>.headline</code>
+  <div class="flex_vert_pad clear"></div>
+  <p> <strong>Paragraph</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis  ornare sem, non pretium justo. Suspendisse non dui sit amet odio tempus  tincidunt. Sed sagittis eu leo ut pulvinar. Nam faucibus velit eu arcu  malesuada, quis condimentum ipsum <em>Emphasized</em>. Nulla ut dolor tortor. Nunc  ac magna ut sem facilisis vehicula ut lobortis ante. Vestibulum eu  suscipit elit. Morbi varius quam non facilisis tempor. Integer  adipiscing quam ullamcorper nisl faucibus mollis. Vestibulum ultrices,  neque sit amet pellentesque convallis, erat augue tempor elit, eu dictum  diam odio id lacus. Aenean id cursus lacus. Duis in fringilla tortor.</p>
+  <code>p, strong, em</code>
+  <div class="flex_vert_pad clear"></div>
+  <div class="flex_33">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+  </div>
+  <div class="flex_33">
+    <h3>Heading 3</h3>
+    <h4>Heading 4 </h4>
+  </div>
+  <div class="flex_33">
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  </div>
+  <div class="clear"></div>
+  <code>h1, h2, h3, h4, h5, h6</code>
+  <div class="flex_vert_pad clear"></div>
+  <dl>
+    <dt>Definition Term</dt>
+    <dd>Definition Description Definition Description Definition Description Definition Description.</dd>
+    <dt>Definition Term</dt>
+    <dd>Definition Description Definition Description Definition Description Definition Description. </dd>
+  </dl>
+  <code>dl, dt, dd</code>
+  <div class="flex_vert_pad clear"></div>
+  <p><a href="#" class="more">Link to Amazing Content</a> | <a href="#" class="more">Link to Amazing Content</a> | <a href="#" class="more">Link to Amazing Content</a></p>
+  <code>a:link, a:hover</code>
+  <div class="flex_vert_pad clear"></div>
+  <pre><code>&lt;ul&gt;<br />	<em>&lt;li&gt;Pre 1&lt;/li&gt;</em><br />	&lt;li&gt;Pre 2&lt;/li&gt;<br />	&lt;li&gt;Pre 3&lt;/li&gt;<br />&lt;/ul&gt;</code></pre>
+  <code>Pre, Code</code>
+  <div class="flex_vert_pad clear"></div>
+  <blockquote><strong>Block Quote:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis  ornare sem, non pretium justo. Suspendisse non dui sit amet odio tempus  tincidunt. Sed sagittis eu leo ut pulvinar. Nam faucibus velit eu arcu  malesuada, quis condimentum ipsum <em>fermentum</em>. Nulla ut dolor tortor. Nunc  ac magna ut sem facilisis vehicula ut lobortis ante. Vestibulum eu  suscipit elit. Morbi varius quam non facilisis tempor. Integer  adipiscing quam ullamcorper nisl faucibus mollis. Vestibulum ultrices,  neque sit amet pellentesque convallis, erat augue tempor elit, eu dictum  diam odio id lacus. Aenean id cursus lacus. Duis in fringilla tortor. </blockquote>
+  <code>blockquote, bold, em</code>
+  <div class="flex_vert_pad clear"></div>
+  <div class="flex_50">
+    <ul>
+      <li>Lorem ipsum dolor sit amet,  adipiscing elit.</li>
+      <li>In vel lectus sodales,  turpis ut, bibendum orci.</li>
+      <li>Integer  nibh at odio, in egestas sem pellentesque.</li>
+      <li>Nulla et neque sit amet eros imperdiet bibendum.</li>
+    </ul>
+    <code>ul, li</code> </div>
+  <div class="flex_50">
+    <ol>
+      <li>Lorem ipsum dolor sit, consectetur adipiscing elit.</li>
+      <li>In vel lectus sodales,   ut, bibendum orci.</li>
+      <li>Integer  nibh at odio dignissim, in egestas sem.</li>
+      <li>Nulla et neque sit amet  imperdiet bibendum.</li>
+    </ol>
+    <code>ol, li</code> </div>
+  <div class="flex_vert_pad clear"></div>
+  <table width="100%" border="1">
+    <tr>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+      <th scope="col">Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Content</td>
+      <td>Table <em>Content</em></td>
+      <td>Table Content</td>
+    </tr>
+    <tr>
+      <td>Table Content</td>
+      <td>Table Content</td>
+      <td>Table Content</td>
+    </tr>
+  </table>
+  <br />
+  <code>table, tr, td</code>
+  <div class="flex_vert_pad clear"></div>
+  <label for="textfield"></label>
+  <div class="flex_33">
+    <input type="text" name="textfield" id="textfield" placeholder="Input Field" />
+    <label for="checkbox">
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      This is a Checkbox </label>
+    <label>
+      <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0" />
+      Radio</label>
+    <label>
+      <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1" />
+      Radio</label>
+      <code>input, checkbox, radio</code>
+  </div>
+  <div class="flex_33">
+    <textarea name="textarea" id="textarea" cols="30" rows="5" placeholder="This a textarea." ></textarea>
+          <code>textarea</code>
+
+  </div>
+  <div class="flex_33">
+    <select name="select" id="select">
+    </select>
+    <input name="button" type="submit" class="button" id="button" value="Submit" /><br /><br />
+          <code>select, submit, button</code>
+
+  </div>
+  <div class="flex_vert_pad clear"></div>
+</div>
 </body>
 </html>
