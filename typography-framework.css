@@ -9,10 +9,11 @@ body {
 }
 a, a:visited {
 	text-decoration: underline;
+	color: #00a4ff;
 }
-pre {
-	border: 1px solid #ccc;
-	page-break-inside: avoid;
+a:hover {
+	text-decoration: none;
+	color: #006699;
 }
 thead {
 	display: table-header-group;
@@ -23,15 +24,17 @@ tr, img {
 img {
 	max-width: 100% !important;
 }
+h2, h3 {
+	page-break-after: avoid;
+}
 p, h2, h3 {
 	orphans: 3;
 	widows: 3;
 }
-h2, h3 {
-	page-break-after: avoid;
-}
 p {
 	margin: 0 0 10px;
+	line-height:20px;
+	font-size:14px;
 }
 small {
 	font-size: 85%;
@@ -41,9 +44,7 @@ strong {
 }
 em {
 	font-style: italic;
-}
-cite {
-	font-style: normal;
+	background: #0FC;
 }
 .left {
 	text-align: left;
@@ -95,7 +96,7 @@ h3 small {
 h4 small {
 	font-size: 14px;
 }
-.header {
+.headline {
 	padding-bottom: 9px;
 	margin: 20px 0 30px;
 	border-bottom: 1px solid #eeeeee;
@@ -105,7 +106,6 @@ ul, ol {
 	color: #222222;
 	padding: 0;
 	margin: 0 0 10px 25px;
-	list-style-type: square;
 }
 ul ul, ul ol, ol ol, ol ul {
 	margin-bottom: 0;
@@ -115,15 +115,18 @@ li {
 }
 dl {
 	margin-bottom: 20px;
+	font-size:14px;
+	line-height:20px;
 }
 dt, dd {
 	line-height: 20px;
 }
 dt {
 	font-weight: bold;
+	margin-top: 10px;
 }
 dd {
-	margin-left: 10px;
+	margin: 5px 0px 0px 20px;
 }
 hr {
 	margin: 20px 0;
@@ -136,15 +139,21 @@ abbr[title], abbr[data-original-title] {
 	border-bottom: 1px dotted #999999;
 }
 blockquote {
-	font-size: 12.5px;
-	border-left: 3px solid #ccc;
-	page-break-inside: avoid;
-	padding: 0px 15px 0px 15px;
+	font-size: 14px;
+	line-height: 22px;
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
 	margin: 20px;
-	line-height: 20px;
+	padding: 10px;
+	quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote p {
-	font-size: 12.5px;
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 60px;
+	line-height: 0px;
+	margin-right: 7px;
+	vertical-align: -28px;
 }
 address {
 	display: block;
@@ -152,47 +161,54 @@ address {
 	font-style: normal;
 	line-height: 20px;
 }
-code, pre {
-	padding: 0 3px 2px;
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: 12px;
-	color: #333333;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 code {
-	padding: 2px 4px;
-	color: #d14;
-	background-color: #f7f7f9;
-	border: 1px solid #e1e1e8;
-	white-space: nowrap;
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
 }
 pre {
-	display: block;
-	padding: 9.5px;
-	margin: 0 0 10px;
-	font-size: 13px;
-	line-height: 20px;
-	word-break: break-all;
-	word-wrap: break-word;
-	white-space: pre;
-	white-space: pre-wrap;
-	background-color: #f3f3f3;
-	border: 1px solid #ccc;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+pre.prettyprint {
+  margin-bottom: 20px;
 }
 pre code {
-	padding: 0;
-	font-size: 13px;
-	line-height: 20px;
-	color: inherit;
-	white-space: pre;
-	white-space: pre-wrap;
-	background-color: transparent;
-	border: 0;
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
 }
 table {
 	max-width: 100%;
@@ -258,11 +274,19 @@ select, textarea, input[type="text"] {
 	border-radius: 4px;
 	vertical-align: middle;
 }
-input, textarea {
-	width: 206px;
-}
 textarea {
 	height: auto;
+	width:200px;
+}
+radio,
+checkbox {
+  min-height: 20px;
+  padding-left: 20px;
+}
+radio input[type="radio"],
+checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
 }
 textarea, input[type="text"] {
 	background-color: #ffffff;
@@ -331,15 +355,11 @@ select:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
 .button:hover, .button:focus, .button:active, .button.active, .button.disabled, .button[disabled] {
 	color: #333333;
 	background-color: #e6e6e6;
+	border: 1px solid #777777;
 }
 .button:hover, .button:focus {
 	color: #333333;
 	text-decoration: none;
-	background-position: 0 -15px;
-	-webkit-transition: background-position 0.1s linear;
-	-moz-transition: background-position 0.1s linear;
-	-o-transition: background-position 0.1s linear;
-	transition: background-position 0.1s linear;
 }
 .button:focus {
 	outline: thin dotted #333;
